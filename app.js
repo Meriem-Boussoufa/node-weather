@@ -1,6 +1,7 @@
 const request = require('request')
 
 const geocode = require('./utils/geocode')
+const forecast = require('./utils/forecast')
 
 // const url = 'https://api.openweathermap.org/data/3.0/onecall?lat=51.507&lon=-0.12&appid=8577e30411acb9ecc027a7a3f79a66ef'
 
@@ -29,6 +30,11 @@ const geocode = require('./utils/geocode')
 // })
 
 geocode('Boston', (error, data) => {
+    console.log('Error', error)
+    console.log('Data', data)
+})
+
+forecast(-75.7088, 44.1545, (error,data) => {
     console.log('Error', error)
     console.log('Data', data)
 })
