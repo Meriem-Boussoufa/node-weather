@@ -9,7 +9,7 @@ const url = "https://api.openweathermap.org/data/3.0/onecall?lat=" + latitude + 
         }else if(response.body.error) {
             callback('Unable to find location !', undefined)
         }else {
-            callback(undefined, 'It is current: ' + response.body.current.temp + ' degrees out. It feels like ' + response.body.current.feels_like + ' degress out.')
+            callback(undefined, response.body.current.weather[0].main + ' It is current: ' + response.body.current.temp + ' degrees out. It feels like ' + response.body.current.feels_like + ' degress out.')
         }
     })
 }
