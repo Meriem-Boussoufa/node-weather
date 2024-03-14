@@ -1,3 +1,7 @@
+
+  // npm i nodemon --save-dev
+
+
 const request = require('request')
 
 const geocode = require('./utils/geocode')
